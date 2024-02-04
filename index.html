@@ -1,9 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Простая веб-страница</title>
+    <title>Страница с сегодняшней датой</title>
+    <script>
+        window.onload = function() {
+            var currentDate = new Date();
+            var day = currentDate.getDate();
+            var month = currentDate.getMonth() + 1;
+            var year = currentDate.getFullYear();
+            
+            var dateElement = document.getElementById('today-date');
+            dateElement.innerHTML = day + '.' + month + '.' + year;
+        };
+    </script>
 </head>
 <body>
-    <h1>Привет, мир!</h1>
+    <h1>Сегодняшняя дата:</h1>
+    <p id="today-date"></p>
 </body>
 </html>
